@@ -3,6 +3,7 @@ This is my personal portfolio website.
 It was made using NextJS and TailwindCSS, hosted using Firebase's free tier.
 
 If you wish to fork and re-use this for your own portfolio, within the next section are steps to get this up and running locally.
+
 ---
 
 ### Setup
