@@ -55,7 +55,7 @@ const ProfileCard = ({
           className="mb-6"
           transition={{ delay: 0.4 }}
         >
-          <h3 className="text-lg font-semibold text-gray-800 dark:text-white mb-2">Short Bio</h3>
+          <h3 className="text-lg font-semibold text-gray-800 dark:text-white mb-2">About Me</h3>
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
