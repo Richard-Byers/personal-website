@@ -28,6 +28,7 @@ const SkillsCard = ({
           key={index}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
+          whileHover={{ scale: 1.1 }}
           className="flex items-center gap-2 bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-100 px-3 py-1 rounded-full text-sm"
           transition={{ delay: index * 0.03 }}
         >
