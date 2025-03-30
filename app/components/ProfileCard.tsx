@@ -6,15 +6,14 @@ import {motion} from 'framer-motion'
 const ProfileCard = ({
   name = "Your Name",
   title = "Your Title",
-  shortBio = "Write a short bio about yourself here. This can include your background, interests, and skills.",
-  skills = ["Skill 1", "Skill 2", "Skill 3"],
+  bio = "Write a short bio about yourself here. This can include your background, interests, and skills.",
   imageUrl = "/profile-placeholder.jpg",
 }) => {
   return (
     <motion.div 
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      className="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden max-w-md mx-auto"
+      className="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden max-w-xl mx-auto"
       transition={{ duration: 0.6 }}
     >
       <div className="p-6">
@@ -63,7 +62,7 @@ const ProfileCard = ({
             className="text-gray-600 dark:text-gray-300"
             transition={{ delay: 0.5 }}
           >
-            {shortBio}
+            {bio}
           </motion.p>
         </motion.div>
       </div>

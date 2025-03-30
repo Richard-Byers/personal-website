@@ -14,8 +14,7 @@ export default function Home() {
         <ProfileCard
           name="Richard Byers"
           title="Software Engineer"
-          shortBio="I'm a Software Engineer that is currently working for Proofpoint where I began my professional career as an intern."
-          skills={["React", "Next.js", "TypeScript", "Node.js", "TailwindCSS"]}
+          bio="Software engineer by day, entertainment enthusiast by night! That's me, Richard Byers, from Belfast, Northern Ireland. I leverage my programming skills to build and work on improving full-stack applications. My fascination with technology extends beyond coding. The lessons I learned I have learned while at Proofpoint has been team work, effective communication, discipline, problem solving and adaptabililty. Queen's University equipped me with the technical knowledge and problem-solving skills to excel in this field. When I'm not coding, you'll likely find me gaming - I find it's a great way to unwind and recharge. (Well when not playing eSports titles that is!)"
           imageUrl="/RichardByersCircle.jpeg"
         />
       </div>

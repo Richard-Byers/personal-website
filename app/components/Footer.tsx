@@ -10,6 +10,18 @@ export default function Footer() {
             </p>
             <div className="flex gap-[24px] flex-wrap items-center justify-center">
                 <a
+                  className="text-gray-700 hover:text-red-600 transition-colors"
+                  href="mailto:rbyerswork@outlook.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Email"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M4 4h16v16H4z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                  </svg>
+                </a>
+                <a
                   className="text-gray-700 hover:text-blue-700 transition-colors"
                   href="https://www.linkedin.com/in/richard-byers-200b621b4/"
                   target="_blank"
@@ -23,7 +35,7 @@ export default function Footer() {
                   </svg>
                 </a>
                 <a
-                  className="text-gray-700 hover:text-gray-900 transition-colors"
+                  className="text-gray-700 hover:text-purple-800 transition-colors"
                   href="https://github.com/Richard-Byers"
                   target="_blank"
                   rel="noopener noreferrer"
