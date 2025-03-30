@@ -1,10 +1,11 @@
 This is my personal portfolio website.
 
-It was made using NextJS and TailwindCSS. 
+It was made using NextJS and TailwindCSS, hosted using Firebase's free tier.
 
-If you wish to fork and re-use this for your own portfolio here are the steps below:
+If you wish to fork and re-use this for your own portfolio, within the next section are steps to get this up and running locally.
+---
 
-**Setup**
+### Setup
 
 1. Make sure you have Node, npm and NextJS installed first.
 2. Clone this repo by using the `git clone` command.
