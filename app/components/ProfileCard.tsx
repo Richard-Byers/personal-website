@@ -7,7 +7,6 @@ const ProfileCard = ({
   name = "Your Name",
   title = "Your Title",
   bio = "Write a short bio about yourself here. This can include your background, interests, and skills.",
-  imageUrl = "/profile-placeholder.jpg",
 }) => {
   return (
     <motion.div 
@@ -30,10 +29,11 @@ const ProfileCard = ({
             transition={{ delay: 0.1 }}
           >
             <Image
-              src={imageUrl}
-              alt={`${name}'s profile`}
-              fill
-              className="object-cover"
+              src="/richard.jpg" //Forcing this for firebase
+              alt="Richard Byers"
+              width={3840} 
+              height={2160} 
+              unoptimized
             />
           </motion.div>
           <div className="ml-6">

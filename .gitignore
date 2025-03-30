@@ -16,6 +16,7 @@
 # next.js
 /.next/
 /out/
+.next/
 
 # production
 /build
@@ -39,3 +40,11 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Environment variables
+.env
+.env.local
+
+# Firebase
+.firebase/
+.firebaserc

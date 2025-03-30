@@ -3,6 +3,11 @@ import React from 'react';
 import Image from 'next/image';
 import {motion} from 'framer-motion';
 
+type Skill = {
+  name: string;
+  logo?: string; // Optional property
+};
+
 const SkillsCard = ({
   title = "Your Title",
   webDev = [{ name: "Skill 1", logo: "/path/to/logo1.png" }],
@@ -11,7 +16,7 @@ const SkillsCard = ({
   devOps = [{ name: "Skill 1", logo: "/path/to/logo1.png" }],
   toolsAndEnv = [{ name: "Skill 1", logo: "/path/to/logo1.png" }],
 }) => {
-  const renderSkills = (skills) => (
+  const renderSkills = (skills: Skill[]) => (
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}

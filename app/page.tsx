@@ -1,7 +1,6 @@
 'use client'
 import React from 'react';
 
-import AboutMeCard from './components/AboutMeCard';
 import SkillsCard from './components/SkillsCard';
 import Footer from "./components/Footer";
 import ProfileCard from "./components/ProfileCard";
@@ -15,7 +14,6 @@ export default function Home() {
           name="Richard Byers"
           title="Software Engineer"
           bio="Software engineer by day, entertainment enthusiast by night! That's me, Richard Byers, from Belfast, Northern Ireland. I leverage my programming skills to build and work on improving full-stack applications. My fascination with technology extends beyond coding. The lessons I learned I have learned while at Proofpoint has been team work, effective communication, discipline, problem solving and adaptabililty. Queen's University equipped me with the technical knowledge and problem-solving skills to excel in this field. When I'm not coding, you'll likely find me gaming - I find it's a great way to unwind and recharge. (Well when not playing eSports titles that is!)"
-          imageUrl="/RichardByersCircle.jpeg"
         />
       </div>
       <div className="mb-4">
@@ -39,11 +37,11 @@ export default function Home() {
       frameworks={[
         { name: "Spring Boot", logo: "/logos/springboot.svg" },
         { name: "Express.js", logo: "/logos/ExpressJS.svg" },
-        { name: "Flask", logo: "/logos/flask.svg" },
+        { name: "Flask", logo: "/logos/Flask.svg" },
       ]}
       devOps={[
         { name: "Git", logo: "/logos/git.svg" },
-        { name: "Docker", logo: "/logos/Docker.svg" },
+        { name: "Docker", logo: "/logos/docker.svg" },
         { name: "GitLab CI", logo: "/logos/gitlab.svg" },
       ]}
       toolsAndEnv={[
