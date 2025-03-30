@@ -1,58 +1,69 @@
-import Image from "next/image";
+'use client'
+import React from 'react';
+
+import AboutMeCard from './components/AboutMeCard';
+import SkillsCard from './components/SkillsCard';
 import Footer from "./components/Footer";
+import ProfileCard from "./components/ProfileCard";
+import {motion} from 'framer-motion'
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
+    <main className="container mx-auto py-10 px-4">
+      <div className="mb-4">
+        <ProfileCard
+          name="Richard Byers"
+          title="Software Engineer"
+          shortBio="I'm a Software Engineer that is currently working for Proofpoint where I began my professional career as an intern."
+          skills={["React", "Next.js", "TypeScript", "Node.js", "TailwindCSS"]}
+          imageUrl="/RichardByersCircle.jpeg"
         />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
+      </div>
+      <div className="mb-4">
+    <SkillsCard
+      title="Skills"
+      webDev={[
+        { name: "React", logo: "/logos/react.svg" },
+        { name: "TypeScript", logo: "/logos/typescript.svg" },
+        { name: "JavaScript", logo: "/logos/javascript.svg" },
+        { name: "HTML5", logo: "/logos/html5.svg" },
+        { name: "CSS", logo: "/logos/css.svg" },
+      ]}
+      backendDev={[
+        { name: "Java", logo: "/logos/java.svg" },
+        { name: "Python", logo: "/logos/python.svg" },
+        { name: "PHP", logo: "/logos/php.svg" },
+        { name: "Node.js", logo: "/logos/nodejs.svg" },
+        { name: "PostgreSQL", logo: "/logos/postgres.svg" },
+        { name: "SQL Server", logo: "/logos/sqlserver.svg" },
+      ]}
+      frameworks={[
+        { name: "Spring Boot", logo: "/logos/springboot.svg" },
+        { name: "Express.js", logo: "/logos/ExpressJS.svg" },
+        { name: "Flask", logo: "/logos/flask.svg" },
+      ]}
+      devOps={[
+        { name: "Git", logo: "/logos/git.svg" },
+        { name: "Docker", logo: "/logos/Docker.svg" },
+        { name: "GitLab CI", logo: "/logos/gitlab.svg" },
+      ]}
+      toolsAndEnv={[
+        { name: "macOS", logo: "/logos/macos.svg" },
+        { name: "Windows", logo: "/logos/windows.svg" },
+        { name: "VS Code", logo: "/logos/vscode.svg" },
+        { name: "IntelliJ Idea", logo: "/logos/intellij.svg" },
+        { name: "Postman", logo: "/logos/postman.svg" },
+        { name: "DBeaver", logo: "/logos/dbeaver.svg" },
+      ]}
+    />
+      </div>
+      <motion.div 
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ delay: 0.2 }}
+    >
       <Footer />
-    </div>
+      </motion.div>
+      </main>
   );
 }
