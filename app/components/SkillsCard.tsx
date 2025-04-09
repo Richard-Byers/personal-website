@@ -38,7 +38,6 @@ const SkillsCard = ({
               alt={skill.name}
               width={20}
               height={20}
-              className="rounded-full"
             />
           )}
           <span>{skill.name}</span>
