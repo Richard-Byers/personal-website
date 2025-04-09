@@ -68,7 +68,7 @@ export default function Home() {
           title="Proofpoint"
           subtitle="Software Engineer"
           logo="/logos/proofpoint.jpeg"
-          timeFrom="June 2022"
+          timeFrom="June 2024"
           timeTo="Present"
         />
         <div id="projects" className="mb-4"></div>
