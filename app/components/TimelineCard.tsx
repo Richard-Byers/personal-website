@@ -5,10 +5,11 @@ import { motion } from 'framer-motion';
 
 type TimelineCardProps = {
   title: string;
-  subtitle: string; 
-  logo?: string; 
-  timeFrom: string; 
-  timeTo: string; 
+  subtitle: string;
+  logo?: string;
+  timeFrom: string;
+  timeTo: string;
+  link?: string;
 };
 
 const TimelineCard = ({
@@ -17,6 +18,7 @@ const TimelineCard = ({
   logo,
   timeFrom,
   timeTo,
+  link
 }: TimelineCardProps) => {
   return (
     <motion.div
@@ -58,6 +60,18 @@ const TimelineCard = ({
             >
               <h2 className="text-xl font-bold text-gray-800 dark:text-white">{title}</h2>
               <p className="text-gray-600 dark:text-gray-300">{subtitle}</p>
+              {link && 
+                (
+                    <a
+                        href={link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-blue-500 dark:text-blue-400 hover:underline"
+                    >
+                        Link to Project
+                    </a>
+                )
+            }
             </motion.div>
           </div>
           <motion.div

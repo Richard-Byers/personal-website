@@ -77,6 +77,7 @@ export default function Home() {
           subtitle="Multi-Cloud Management"
           timeFrom="September 2023"
           timeTo="April 2024"
+          link="https://github.com/Richard-Byers/manage-my-cloud"
         />
         <motion.div
           initial={{ opacity: 0 }}
