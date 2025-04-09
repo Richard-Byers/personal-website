@@ -5,6 +5,7 @@ import Footer from "./components/Footer";
 import Navbar from './components/Navbar';
 import ProfileCard from "./components/ProfileCard";
 import SkillsCard from './components/SkillsCard';
+import TimelineCard from './components/TimelineCard';
 
 import {motion} from 'framer-motion'
 
@@ -62,6 +63,21 @@ export default function Home() {
             ]}
           />
         </div>
+        <div id="experience" className="mb-4"></div>
+        <TimelineCard
+          title="Proofpoint"
+          subtitle="Software Engineer"
+          logo="/logos/proofpoint.jpeg"
+          timeFrom="June 2022"
+          timeTo="Present"
+        />
+        <div id="projects" className="mb-4"></div>
+        <TimelineCard
+          title="Manage My Cloud"
+          subtitle="Multi-Cloud Management"
+          timeFrom="September 2023"
+          timeTo="April 2024"
+        />
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
