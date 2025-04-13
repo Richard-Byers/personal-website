@@ -41,14 +41,14 @@ export default function Navbar() {
         </div>
         <ul className="flex space-x-6 text-gray-600 dark:text-gray-300">
           <li>
-          <Link
-            to="top"
-            smooth={true}
-            duration={500}
-            className="cursor-pointer hover:text-gray-800 dark:hover:text-white transition-colors"
-          >
-            Home
-          </Link>
+            <Link
+              to="top"
+              smooth={true}
+              duration={500}
+              className="cursor-pointer hover:text-gray-800 dark:hover:text-white transition-colors"
+            >
+              Home
+            </Link>
           </li>
           <li>
             <Link
@@ -68,6 +68,16 @@ export default function Navbar() {
               className="cursor-pointer hover:text-gray-800 dark:hover:text-white transition-colors"
             >
               Experience
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="education"
+              smooth={true}
+              duration={500}
+              className="cursor-pointer hover:text-gray-800 dark:hover:text-white transition-colors"
+            >
+              Education
             </Link>
           </li>
           <li>

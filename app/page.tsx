@@ -151,7 +151,7 @@ export default function Home() {
           <motion.div
             custom="right"
             variants={cardVariants}
-            id="experience"
+            id="education"
             className="mb-4"
           >
             <TimelineCard
