@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-
-import {motion} from 'framer-motion';
+import { motion } from 'framer-motion';
+import { Link } from 'react-scroll';
 
 export default function Navbar() {
   const [isVisible, setIsVisible] = useState(true);
@@ -41,39 +41,47 @@ export default function Navbar() {
         </div>
         <ul className="flex space-x-6 text-gray-600 dark:text-gray-300">
           <li>
-            <a
-              href="#"
-              className="hover:text-gray-800 dark:hover:text-white transition-colors"
-            >
-              Home
-            </a>
+          <Link
+            to="top"
+            smooth={true}
+            duration={500}
+            className="cursor-pointer hover:text-gray-800 dark:hover:text-white transition-colors"
+          >
+            Home
+          </Link>
           </li>
           <li>
-            <a
-              href="#skills"
-              className="hover:text-gray-800 dark:hover:text-white transition-colors"
+            <Link
+              to="skills"
+              smooth={true}
+              duration={500}
+              className="cursor-pointer hover:text-gray-800 dark:hover:text-white transition-colors"
             >
               Skills
-            </a>
+            </Link>
           </li>
           <li>
-            <a
-              href="#experience"
-              className="hover:text-gray-800 dark:hover:text-white transition-colors"
+            <Link
+              to="experience"
+              smooth={true}
+              duration={500}
+              className="cursor-pointer hover:text-gray-800 dark:hover:text-white transition-colors"
             >
               Experience
-            </a>
+            </Link>
           </li>
           <li>
-            <a
-              href="#projects"
-              className="hover:text-gray-800 dark:hover:text-white transition-colors"
+            <Link
+              to="projects"
+              smooth={true}
+              duration={500}
+              className="cursor-pointer hover:text-gray-800 dark:hover:text-white transition-colors"
             >
               Projects
-            </a>
+            </Link>
           </li>
         </ul>
       </div>
-      </motion.div>
+    </motion.div>
   );
 }

@@ -1,13 +1,19 @@
 'use client'
 import React from 'react';
 import Image from 'next/image';
-import {motion} from 'framer-motion'
+import { motion } from 'framer-motion';
+
+type ProfileCardProps = {
+  name?: string;
+  title?: string;
+  bio?: React.ReactNode;
+};
 
 const ProfileCard = ({
   name = "Your Name",
   title = "Your Title",
   bio = "Write a short bio about yourself here. This can include your background, interests, and skills.",
-}) => {
+}: ProfileCardProps) => {
   return (
     <motion.div 
       initial={{ opacity: 0 }}
@@ -29,7 +35,7 @@ const ProfileCard = ({
             transition={{ delay: 0.1 }}
           >
             <Image
-              src="/richard.jpg" //Forcing this for firebase
+              src="/richard.jpg" // Forcing this for firebase
               alt="Richard Byers"
               width={3840} 
               height={2160} 
