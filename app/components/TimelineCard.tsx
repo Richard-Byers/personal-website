@@ -9,6 +9,7 @@ type TimelineProps = {
   logo?: string;
   timeFrom: string;
   timeTo: string;
+  grade?: string;
   link?: string;
 };
 
@@ -61,6 +62,11 @@ const TimelineCard = ({ title, info }: TimelineCardProps) => {
               >
                 <h2 className="text-xl font-bold text-gray-800 dark:text-white">{prop.title}</h2>
                 <p className="text-gray-600 dark:text-gray-300">{prop.subtitle}</p>
+                {prop.grade && (
+                  <p className="text-gray-600 dark:text-gray-300 font-semibold">
+                    Grade: {prop.grade}
+                  </p>
+                )}
                 {prop.link && (
                   <a
                     href={prop.link}

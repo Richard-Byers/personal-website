@@ -133,7 +133,7 @@ export default function Home() {
               info={[
                 {
                   title: "Proofpoint",
-                  subtitle: "Software Engineer Placement Year Intern",
+                  subtitle: "Software Engineer Intern",
                   logo: "/logos/proofpoint.jpeg",
                   timeFrom: "June 2022",
                   timeTo: "June 2024",
@@ -150,6 +150,26 @@ export default function Home() {
           </motion.div>
           <motion.div
             custom="right"
+            variants={cardVariants}
+            id="experience"
+            className="mb-4"
+          >
+            <TimelineCard
+              title="Education"
+              info={[
+                {
+                  title: "Queen's University Belfast",
+                  subtitle: "BEng Software Engineering With Placement",
+                  logo: "/logos/queens.png",
+                  timeFrom: "September 2020",
+                  timeTo: "June 2024",
+                  grade: "First Class Honours"
+                },
+              ]}
+            />
+          </motion.div>
+          <motion.div
+            custom="left"
             variants={cardVariants}
             id="projects"
             className="mb-4"
