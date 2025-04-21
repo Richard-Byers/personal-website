@@ -42,9 +42,7 @@ export default function Navbar() {
         <ul className="flex space-x-6 text-gray-600 dark:text-gray-300">
           <li>
             <Link
-              to="top"
-              smooth={true}
-              duration={500}
+              spy to="top"
               className="cursor-pointer hover:text-gray-800 dark:hover:text-white transition-colors"
             >
               Home
@@ -52,8 +50,7 @@ export default function Navbar() {
           </li>
           <li>
             <Link
-              to="skills"
-              smooth={true}
+              spy to="skills"
               duration={500}
               className="cursor-pointer hover:text-gray-800 dark:hover:text-white transition-colors"
             >
@@ -62,9 +59,7 @@ export default function Navbar() {
           </li>
           <li>
             <Link
-              to="experience"
-              smooth={true}
-              duration={500}
+              spy to="experience"
               className="cursor-pointer hover:text-gray-800 dark:hover:text-white transition-colors"
             >
               Experience
@@ -72,9 +67,7 @@ export default function Navbar() {
           </li>
           <li>
             <Link
-              to="education"
-              smooth={true}
-              duration={500}
+              spy to="education"
               className="cursor-pointer hover:text-gray-800 dark:hover:text-white transition-colors"
             >
               Education
@@ -82,9 +75,7 @@ export default function Navbar() {
           </li>
           <li>
             <Link
-              to="projects"
-              smooth={true}
-              duration={500}
+              spy to="projects"
               className="cursor-pointer hover:text-gray-800 dark:hover:text-white transition-colors"
             >
               Projects
