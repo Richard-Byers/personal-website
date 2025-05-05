@@ -5,9 +5,11 @@ import { Link } from 'react-scroll';
 export default function Navbar() {
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
+  const [isClickingLink, setIsClickingLink] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
+      if (isClickingLink) return;
       const currentScrollY = window.scrollY;
 
       if (currentScrollY > lastScrollY && currentScrollY > 50) {
@@ -23,7 +25,12 @@ export default function Navbar() {
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, [lastScrollY]);
+  }, [lastScrollY, isClickingLink]);
+
+  const handleLinkClick = () => {
+    setIsClickingLink(true);
+    setTimeout(() => setIsClickingLink(false), 1000); // Reset after scrolling finishes
+  };
 
   return (
     <motion.div
@@ -43,6 +50,7 @@ export default function Navbar() {
           <li>
             <Link
               spy to="top"
+              onClick={handleLinkClick}
               className="cursor-pointer hover:text-gray-800 dark:hover:text-white transition-colors"
             >
               Home
@@ -51,7 +59,7 @@ export default function Navbar() {
           <li>
             <Link
               spy to="skills"
-              duration={500}
+              onClick={handleLinkClick}
               className="cursor-pointer hover:text-gray-800 dark:hover:text-white transition-colors"
             >
               Skills
@@ -60,6 +68,7 @@ export default function Navbar() {
           <li>
             <Link
               spy to="experience"
+              onClick={handleLinkClick}
               className="cursor-pointer hover:text-gray-800 dark:hover:text-white transition-colors"
             >
               Experience
@@ -68,6 +77,7 @@ export default function Navbar() {
           <li>
             <Link
               spy to="education"
+              onClick={handleLinkClick}
               className="cursor-pointer hover:text-gray-800 dark:hover:text-white transition-colors"
             >
               Education
@@ -76,6 +86,7 @@ export default function Navbar() {
           <li>
             <Link
               spy to="projects"
+              onClick={handleLinkClick}
               className="cursor-pointer hover:text-gray-800 dark:hover:text-white transition-colors"
             >
               Projects
