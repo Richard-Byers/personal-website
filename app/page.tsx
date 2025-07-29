@@ -133,17 +133,24 @@ export default function Home() {
               info={[
                 {
                   title: "Proofpoint",
+                  subtitle: "Software Engineer II",
+                  logo: "/logos/proofpoint.jpeg",
+                  timeFrom: "July 2025",
+                  timeTo: "Present",
+                },
+                {
+                  title: "Proofpoint",
+                  subtitle: "Software Engineer I",
+                  logo: "/logos/proofpoint.jpeg",
+                  timeFrom: "June 2024",
+                  timeTo: "July 2025",
+                },
+                {
+                  title: "Proofpoint",
                   subtitle: "Software Engineer Intern",
                   logo: "/logos/proofpoint.jpeg",
                   timeFrom: "June 2022",
                   timeTo: "June 2024",
-                },
-                {
-                  title: "Proofpoint",
-                  subtitle: "Software Engineer",
-                  logo: "/logos/proofpoint.jpeg",
-                  timeFrom: "June 2024",
-                  timeTo: "Present",
                 },
               ]}
             />
