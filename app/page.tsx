@@ -112,6 +112,12 @@ export default function Home() {
                 { name: "Docker", logo: "/logos/docker.svg" },
                 { name: "GitLab CI", logo: "/logos/gitlab.svg" },
               ]}
+              cloudAndData={[
+                { name: "AWS", logo: "/logos/Amazon_Web_Services_Logo.svg", logoWidth: 33 },
+                { name: "Apache Spark", logo: "/logos/Apache_Spark_logo.svg", logoWidth: 39 },
+                { name: "Apache Iceberg", logo: "/logos/Apache_Iceberg_Logo.svg", logoWidth: 86 },
+                { name: "AWS EMR", logo: "/logos/aws-emr.svg", logoWidth: 16 },
+              ]}
               toolsAndEnv={[
                 { name: "macOS", logo: "/logos/macos.svg" },
                 { name: "Windows", logo: "/logos/windows.svg" },

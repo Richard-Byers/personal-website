@@ -6,6 +6,7 @@ import {motion} from 'framer-motion';
 type Skill = {
   name: string;
   logo?: string; // Optional property
+  logoWidth?: number; // Optional: for non-square/wordmark logos, keeps aspect ratio at a fixed 20px height
 };
 
 const SkillsCard = ({
@@ -15,6 +16,7 @@ const SkillsCard = ({
   frameworks = [{ name: "Skill 1", logo: "/path/to/logo1.png" }],
   devOps = [{ name: "Skill 1", logo: "/path/to/logo1.png" }],
   toolsAndEnv = [{ name: "Skill 1", logo: "/path/to/logo1.png" }],
+  cloudAndData = [] as Skill[],
 }) => {
   const renderSkills = (skills: Skill[]) => (
     <motion.div
@@ -36,8 +38,9 @@ const SkillsCard = ({
             <Image
               src={skill.logo}
               alt={skill.name}
-              width={20}
+              width={skill.logoWidth ?? 20}
               height={20}
+              style={{ objectFit: 'contain' }}
             />
           )}
           <span>{skill.name}</span>
@@ -98,6 +101,17 @@ const SkillsCard = ({
           <h3 className="text-lg font-semibold text-gray-800 dark:text-white mb-2">DevOps</h3>
           {renderSkills(devOps)}
         </motion.div>
+        {cloudAndData.length > 0 && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            className="mb-6"
+            transition={{ delay: 0.6 }}
+          >
+            <h3 className="text-lg font-semibold text-gray-800 dark:text-white mb-2">Cloud & Data Engineering</h3>
+            {renderSkills(cloudAndData)}
+          </motion.div>
+        )}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
