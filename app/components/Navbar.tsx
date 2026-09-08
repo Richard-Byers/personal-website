@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-scroll';
+import ThemeToggle from './ThemeToggle';
 
 export default function Navbar() {
   const [isVisible, setIsVisible] = useState(true);
@@ -93,6 +94,7 @@ export default function Navbar() {
             </Link>
           </li>
         </ul>
+        <ThemeToggle />
       </div>
     </motion.div>
   );
