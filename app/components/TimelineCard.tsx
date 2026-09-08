@@ -23,7 +23,7 @@ const TimelineCard = ({ title, info }: TimelineCardProps) => {
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      className="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden max-w-xl mx-auto"
+      className="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden max-w-4xl mx-auto"
       transition={{ duration: 0.6 }}
     >
       <div className="p-6 space-y-6">
