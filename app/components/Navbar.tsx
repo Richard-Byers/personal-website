@@ -41,6 +41,7 @@ export default function Navbar() {
   const handleLinkClick = () => {
     setIsClickingLink(true);
     setIsMenuOpen(false);
+    setIsVisible(false); // Hide navbar so it doesn't cover the section being scrolled to
     setTimeout(() => setIsClickingLink(false), 1000); // Reset after scrolling finishes
   };
 
